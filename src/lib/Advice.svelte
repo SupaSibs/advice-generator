@@ -1,11 +1,14 @@
 <script lang="ts">
- import Advice from "./advicegen.js"
+ import Advice from "./advicegen.ts"
+  let advice;
 function generateAdvice() {
-Advice().then(a => window.advice = a); 
+advice = JSON.stringify(Advice());
 }
- $:id = window.advice;
- //$:text = window.advice.text;
+  generateAdvice()
+  console.log(advice)
+
+ 
 </script>
-  Advice #{id}
-  "{id}"
+  Advice #{adv}
+  "{adv}"
   
