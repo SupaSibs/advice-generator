@@ -1,6 +1,6 @@
 <script lang="ts">
- import Attribution from "./lib/Attribtuion.svelte"
-  import AdviceGen from './lib/advice-generator.svelte'
+ import Attribution from "./lib/Attribution.svelte"
+  import AdviceGen from './lib/Advice.svelte'
 	
 </script>
 <AdviceGen />

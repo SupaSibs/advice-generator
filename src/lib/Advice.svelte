@@ -1,9 +1,11 @@
 <script lang="ts">
- import Advice as genAdvice from "./advicegen.js"
-  const advice = genAdvice().then(alert); 
- $:id = advice.slip_id
- $: text = advice.text
+ import Advice from "./advicegen.js"
+function generateAdvice() {
+Advice().then(a => window.advice = a); 
+}
+ $:id = window.advice;
+ //$:text = window.advice.text;
 </script>
   Advice #{id}
-  "{text}"
+  "{id}"
   
