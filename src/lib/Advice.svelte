@@ -6,9 +6,8 @@ advice = JSON.stringify(Advice());
 }
   generateAdvice()
   console.log(advice)
-
- 
+  $:[id, adv] = advice;
 </script>
-  Advice #{adv}
+  Advice #{id}
   "{adv}"
   
