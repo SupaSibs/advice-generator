@@ -1,12 +1,15 @@
 <script lang="ts">
  import Advice from "./advicegen.ts"
   let advice;
+ let adv; let id;
 function generateAdvice() {
-advice = JSON.stringify(Advice());
+ advice = Advice().then(x => advice = x)
+  adv = advice.slip.advice
+  id = advice.slip.id
 }
   generateAdvice()
   console.log(advice)
-  $:[id, adv] = advice;
+
 </script>
   Advice #{id}
   "{adv}"
