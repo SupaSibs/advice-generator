@@ -1,7 +1,8 @@
-export default async function Advice() {
-  let adviFet = await 
-fetch("https://api.adviceslip.com/advice")
-  let advi = await adviFet.json()
-  console.log(advi)
-return advi;
+export default function Advice() {
+let advi;
+fetch("https://api.adviceslip.com/advice").then(r => r.json()).then(adv => {
+    advi = adv;
+    console.log(advi);
+  })
+  return advi
 }
