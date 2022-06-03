@@ -3,9 +3,9 @@
   let advice;
  let adv; let id;
 function generateAdvice() {
- advice = Advice().then(x => advice = x)
-  adv = advice.slip.advice
-  id = advice.slip.id
+ advice = Advice()
+  adv = advice
+  id = advice
 }
   generateAdvice()
   console.log(advice)
