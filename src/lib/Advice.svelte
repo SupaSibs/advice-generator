@@ -23,7 +23,8 @@ div {
   justify-content: center;
   align-items: center;
   min-height: 40%;
-  background-color: $GrayishBlue;
+  background-color: $DarkGrayishBlue;
+  color: white;
 }
 </style>
   
