@@ -5,4 +5,6 @@
 </script>
 <AdviceGen />
   <Attribution />
-    
+    <style>
+        @use "./lib/vars as *";
+    </style>

@@ -17,11 +17,13 @@ fetcher = await fetch("https://api.adviceslip.com/advice")
   <p>"{adv}"</p>
 </div>
 <style lang="scss">
+  @use "./vars" as *;
 div {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 40%;
+  background-color: $GrayishBlue;
 }
 </style>
   
