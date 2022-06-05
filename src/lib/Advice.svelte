@@ -12,6 +12,18 @@ fetcher = await fetch("https://api.adviceslip.com/advice")
   console.log(advice)
 
 </script>
-  Advice #{id}
-  "{adv}"
+<div>
+ <p>Advice #{id}</p>
+  <p>"{adv}"</p>
+</div>
+<style lang="scss">
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40%;
+}
+</style>
+  
+  
   
