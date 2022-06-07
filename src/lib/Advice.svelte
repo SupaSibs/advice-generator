@@ -1,4 +1,7 @@
 <script lang="ts">
+  import Pattern from "../assets/pattern-divider-desktop.svg";
+  import PatternMobile from "../assets/pattern-divider-mobile.svg";
+  let Divider = (window.innerWidth > 700) ? PatternMobile : Pattern;
   let advice; let fetcher; let res;
  let adv; let id;
 async function generateAdvice() {
@@ -15,12 +18,16 @@ fetcher = await fetch("https://api.adviceslip.com/advice")
 <div>
  <p id="id">Advice #{id}</p>
   <p id="adv">"{adv}"</p>
+  <img alt="pattern" src={Divider}>
   <button on:click={generateAdvice}>
-New Advice
+New advice
   </button>
 </div>
 <style lang="scss">
   @use "./vars" as *;
+  img[alt="pattern"] {
+  max-width: 100%
+  }
 div {
   display: flex;
   flex-direction: column;
