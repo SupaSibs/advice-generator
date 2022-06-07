@@ -10,6 +10,7 @@
     <style lang="scss">
    @use "./lib/vars" as *;
 div {
+ font-family: $Font;
    background-color: $DarkBlue;
     min-height: 100vh;
        display: flex;
