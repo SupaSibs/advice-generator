@@ -1,7 +1,11 @@
 <script lang="ts">
   import Pattern from "../assets/pattern-divider-desktop.svg";
   import PatternMobile from "../assets/pattern-divider-mobile.svg";
-  let Divider = (window.innerWidth > 700) ? PatternMobile : Pattern;
+  console.log(window.innerWidth)
+  $: deviceWidth = window.innerWidth;
+  let Divider = Pattern;
+
+console.log(Divider)
   let advice; let fetcher; let res;
  let adv; let id;
 async function generateAdvice() {
@@ -13,7 +17,10 @@ fetcher = await fetch("https://api.adviceslip.com/advice")
 }
   generateAdvice()
   console.log(advice)
-
+if (deviceWidth < 600) {
+  Divider = Pattern
+  console.log(Divider)
+}
 </script>
 <div>
  <p id="id">Advice #{id}</p>
@@ -26,7 +33,8 @@ New advice
 <style lang="scss">
   @use "./vars" as *;
   img[alt="pattern"] {
-  max-width: 100%
+  max-width: 100%;
+  margin: 10px;
   }
 div {
   display: flex;
