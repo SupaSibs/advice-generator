@@ -5,8 +5,9 @@
 </script>
 <div>
 <AdviceGen />
+    <Attribution />
 </div>
-  <Attribution />
+
     <style lang="scss">
    @use "./lib/vars" as *;
 div {
@@ -16,5 +17,7 @@ div {
        display: flex;
   justify-content: center;
   align-items: center;
+      flex-direction: column;
   } 
+    
     </style>
